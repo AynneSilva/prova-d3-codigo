@@ -8,11 +8,49 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="app.js" type="text/javascript"></script>
 
-<body onload="getRequest()">
+    <style>
+        input {
+            border:1px solid #ccc;
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+        }
 
-    <div id="dataDisplay"></div>
+        textarea {
+            border:1px solid #ccc;
+            width: 100%;
+            border-radius: 5px;
+            height: 400px;
+        }
 
-    <button onclick="postData('A fabula', 'Teste')">Inserir Novo Post</button>
-    
+        button {
+            border: none;
+            width: 50%;
+            height: 50px;
+            border-radius: 7.5px;
+            font-weight: bolder;
+            background-color: #2266ff;
+            color: white;
+        }
+    </style>
+
+
+<body onload="getRequest()" style="display: flex; padding: 10px;">
+    <section style="width: 30%; padding: 15px">
+        <h1>Criar Publicacao</h1>
+        <form action="#" onclick="event.preventDefault()">
+            <label>Título</label>
+            <input type="text" id="titulo">
+            <br/>  <br/>
+            <label>Descricao</label>
+            <textarea id="criarPublicacao"></textarea>
+            <br/>
+            <br/>
+            <button onclick="postData('A fabula', 'Teste')">Inserir Novo Post</button>
+        </form>
+    </section>
+    <section style="width: 67.5%; padding: 2.5%;">
+        <div id="dataList"></div>
+    </section>
 </body>
 </html>
